@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required><br>
+            <label for="sex">Sex (1 = male; 0 = female):</label>
+            <input type="text" id="sex" name="sex" required><br>
+            <label for="cp">Chest Pain Type (0-3):</label>
+            <input type="text" id="cp" name="cp" required><br>
+            <label for="trestbps">Resting Blood Pressure:</label>
+            <input type="text" id="trestbps" name="trestbps" required><br>
+            <label for="chol">Serum Cholesterol (mg/dl):</label>
+            <input type="text" id="chol" name="chol" required><br>
+            <label for="fbs">Fasting Blood Sugar > 120 mg/dl (1 = true; 0 = false):</label>
+            <input type="text" id="fbs" name="fbs" required><br>
+            <label for="restecg">Resting ECG (0-2):</label>
+            <input type="text" id="restecg" name="restecg" required><br>
+            <label for="thalach">Maximum Heart Rate Achieved:</label>
+            <input type="text" id="thalach" name="thalach" required><br>
+            <label for="exang">Exercise Induced Angina (1 = yes; 0 = no):</label>
+            <input type="text" id="exang" name="exang" required><br>
+            <label for="oldpeak">ST Depression Induced by Exercise:</label>
+            <input type="text" id="oldpeak" name="oldpeak" required><br>
+            <label for="slope">Slope of the Peak Exercise ST Segment (0-2):</label>
+            <input type="text" id="slope" name="slope" required><br>
+            <label for="ca">Number of Major Vessels (0-3):</label>
+            <input type="text" id="ca" name="ca" required><br>
+            <label for="thal">Thalassemia (1 = normal; 2 = fixed defect; 3 = reversable defect):</label>
+            <input type="text" id="thal" name="thal" required><br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
